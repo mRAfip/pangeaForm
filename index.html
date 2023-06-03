@@ -17,7 +17,7 @@ h1 {
 
 #progress {
   position: absolute;
-  background: #0069ec;
+  background: transparent;
   height: 100vh;
   width: 0;
   transition: width 0.2s ease-in-out;
@@ -37,7 +37,7 @@ h1 {
 #register {
   background: #fff;
   position: relative;
-  width: 410px;
+  width: 610px;
   padding: 2px 15px 20px 15px;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
   transition: transform .1s ease-in-out;
@@ -67,7 +67,7 @@ h1 {
 #inputContainer {
   position: relative;
   opacity: 0;
-  width: 350px;
+  width: 560px;
   margin-top: 25px;
   transition: opacity .3s ease-in-out;
 }
@@ -150,10 +150,11 @@ h1 {
                         
                       <script>
                         var questions = [
-          {question:"What's your first name?"},
-          {question:"What's your last name?"},
-          {question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
-          {question:"Create your password", type: "password"}
+          {question:"What's your full name?"},
+          {question:"What's your stage name?"},
+          {question:"What's your phone number? ", type: "number"},
+          {question:"We want to know where your rap game hails from"},
+          {question:"Feel free to drop a link to your sample work "}
         ]
         
         /**********
@@ -204,7 +205,8 @@ h1 {
             
             // add the h1 at the end with the welcome text
             var h1 = document.createElement('h1')
-            h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
+            h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!' +  'Our team will contact you'))
+      
             setTimeout(function() {
               register.parentElement.appendChild(h1)     
               setTimeout(function() {h1.style.opacity = 1}, 50)
@@ -279,14 +281,12 @@ h1 {
             </div>
 
             <div class="col-6">
-                <img src="./image/bg.jpg" class="right-img"/>
+                <img src="./image/4.png" class="right-img"/>
             </div>
 
         </div>
 
-           
-
-
+            
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 
